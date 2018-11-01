@@ -9,7 +9,13 @@ body {
   height: 100vh;
 }
 
+.js-slider {
+  margin: auto;
+}
+
 .slider__container {
+  font-size: 0;
+  white-space: nowrap;
   position: relative;
   padding: 0 50px;
   margin: auto;
@@ -19,8 +25,8 @@ body {
   /* overflow: hidden; */
 }
 
-.slider__container:before,
-.slider__container:after {
+.slider__button {
+  z-index: 1;
   content: "";
   height: 100%;
   width: 50px;
@@ -30,10 +36,47 @@ body {
   top: 50%;
 }
 
-.slider__container:before {
+.slider__button-back {
   left: 0;
 }
 
-.slider__container:after {
+.slider__button-next {
   right: 0;
+}
+
+.slider__window {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.slider__content-wrapper {
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 500%;
+}
+
+.content-wrapper__item {
+  height: 100%;
+  width: 20%;
+  font-size: 50px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.content-wrapper__item:nth-of-type(odd) {
+  background-color: blue;
+}
+
+.item {
+  position: relative;
+}
+
+.item__content {
+  position: absolute;
+  font-size: 150px;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
 }

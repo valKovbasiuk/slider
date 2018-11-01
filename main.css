@@ -1,0 +1,39 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+}
+
+.slider__container {
+  position: relative;
+  padding: 0 50px;
+  margin: auto;
+  width: 400px;
+  height: 300px;
+  border: 1px red solid;
+  /* overflow: hidden; */
+}
+
+.slider__container:before,
+.slider__container:after {
+  content: "";
+  height: 100%;
+  width: 50px;
+  background-color: green;
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+}
+
+.slider__container:before {
+  left: 0;
+}
+
+.slider__container:after {
+  right: 0;
+}
